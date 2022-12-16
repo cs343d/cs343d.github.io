@@ -1,0 +1,331 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CS343D</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+li
+{
+background-position: 100% .4em;
+<!--padding-right: .6em;-->
+<!--margin: 1em 0;-->
+border-bottom: 1px solid gray;
+}
+li:hover {
+background-color: whitesmoke;
+}
+
+a {
+text-decoration: none;
+}
+a:link {
+color: black;
+border-bottom: 1px dotted black;
+}
+a:visited {
+color: black;
+border-bottom: 1px dotted black;
+}
+a:hover {
+color: #000000;
+border-bottom: 2px solid black;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.schedule_list {
+  list-style-type: none;
+     max-width: 50%;
+ }
+
+/* Add a blue background color to the top navigation */
+.topnav {
+  background-color: #1974D2;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+  <h1>CS343D: Domain-Specific Programming Models and Compilers </h1>
+ <div class="topnav">
+  <a href="/index.html">Current Offering</a>
+</div>
+
+<h2> Course Description </h2>
+<p>
+This class will cover the principles and practices of domain-specific programming models and compilers for dense and sparse applications in scientific computing, data science, and machine learning. We will study programming models from the recent literature, categorize them, and discuss their properties. We will also discuss promising directions for their compilation, including the separation of algorithm, schedule, and data representation, polyhedral compilation versus rewrite rules, and sparse iteration theory. Prerequisites: CS143 or equivalent
+</p>
+
+<h2> Basic Logistics</h2>
+<p> <b>Professor</b>: <a href = "mailto: kjolstad@cs.stanford.edu">Fred Kjolstad</a></p>
+<p> <b>CA</b>: <a href = "mailto: donovick@cs.stanford.edu">Caleb Donovick</a></p>
+<p> <b>Lecture Times</b>: Tue, Thu 9:45 AM - 11:15 AM </p>
+
+<p> <b>Lecture Location</b>: Sequoia Hall 200 </p>
+
+<!-- <p> For more detail see the <a href="course_info.html">course info</a> page. -->
+
+<h2> Schedule</h2>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td></td>
+    <th>Date</th>
+    <th>Topic</th>
+    <th>Readings</th>
+  </tr>
+  <tr>
+    <td>Lecture 1</td>
+    <td>September 21</td>
+    <td><a href="lectures/lecture1.introduction.pdf"><b>Introduction</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/10.1145/6424.315691">Programming Pearls: little languages</a> </li>
+        <li> <a href="https://cacm.acm.org/magazines/2019/2/234352-a-new-golden-age-for-computer-architecture/fulltext">A New Golden Age for Computer Architecture</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 2</td>
+    <td>September 23</td>
+    <td><a href="lectures/lecture2.compilers.pdf"><b>Domain-Specific Compilers</b></a></td> 
+    <td>
+      <ul>
+        <li> <a href="https://science.sciencemag.org/content/368/6495/eaam9744">There’s plenty of room at the Top: What will drive computer performance after Moore’s law?</a> </li>
+        <li> <a href="https://dl.acm.org/doi/10.1145/359576.359579">Can Programming Be Liberated from the von Neumann Style? (except Sections 12, 13, and 14)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 3</td>
+    <td>September 28</td>
+    <td><a href="lectures/lecture3.build.pdf"><b>Building DSLs I</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.49.6020">Building Domain-Specific Embedded Languages</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 4</td>
+    <td>September 30</td>
+    <td><a href="lectures/lecture4.collections.pdf"><b>Collection-Oriented Languages</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="https://ieeexplore.ieee.org/document/92044">Collection-Oriented Languages</a> </li>
+        <li> <a href="https://www.sciencedirect.com/science/articlepii/0898122175900115">An Introduction to the Set Theoretical Language SETL</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 5</td>
+    <td>October 5</td>
+    <td><a href="lectures/lecture5.dense.pdf"><b>Dense Programming Systems</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="https://www.usenix.org/conference/osdi16/technical-sessions/presentation/abadi">TensorFlow: A System for Large-Scale Machine Learning</a> </li>
+        <li> <a href="https://dl.acm.org/doi/10.1145/2185520.2185528">Decoupling Algorithms from Schedules for Easy Optimization of Image Processing Pipelines</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 6</td>
+    <td>October 7</td>
+    <td><a href="lectures/lecture6.sparse.pdf"><b>Sparse Programming Systems</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/10.1145/362384.362685">A Relational Model of Data for Large Shared Data Banks</a> </li>
+        <li> <a href="http://fredrikbk.com/publications/kjolstad-thesis.pdf">Sparse Tensor Algebra Compilation (Chapters 1 and 9)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 7</td>
+    <td>October 12</td>
+    <td><a href="lectures/lecture7.iteration1.pdf"><b>Sparse Iteration Model I</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="http://fredrikbk.com/publications/kjolstad-thesis.pdf">Sparse Tensor Algebra Compilation (Chapters 2 and 3)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 8</td>
+    <td>October 14</td>
+    <td><a href="lectures/lecture8.iteration2.pdf"><b>Sparse Iteration Model II</b></a></td> 
+    <td>
+      <ul>
+        <li> <a href="http://fredrikbk.com/publications/kjolstad-thesis.pdf">Sparse Tensor Algebra Compilation (Chapters 4, 5, and 6)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 9</td>
+    <td>October 19</td>
+    <td><b>Project Pitch</b></td>
+    <td>
+      <!--
+      <ul>
+        <li> <a href=""></a> </li>
+        <li> <a href=""></a> </li>
+      </ul>
+      -->
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 10</td>
+    <td>October 21</td>
+    <td><b>Building DSLs in Python (Caleb Donovick)</b></td>
+    <td>
+      <ul>
+        <li> First 1.5 hours of <a href="https://www.youtube.com/watch?v=sPiWg5jSoZI">Python 3 Metaprogramming</a> (the whole talk is great) </li>
+        <li> <a href="https://blog.ionelmc.ro/2015/02/09/understanding-python-metaclasses/">Understanding Python metaclasses</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 11</td>
+    <td>October 26</td>
+    <td><b>Project Discussion I</b></td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 12</td>
+    <td>October 28</td>
+    <td><b>Project Discussion II</b></td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>November 2</td>
+    <td>Democracy Day (no classes)</td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 13</td>
+    <td>November 4</td>
+    <td><a href="lectures/lecture13.build2.pdf"><b>Building DSLs II (Pat Hanrahan)</b></a></td> 
+    <td>
+      <ul>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 14</td>
+    <td>November 9</td>
+    <td><b>Guest speaker: Towards Automated Construction of Compiler Optimizations (Charith Mendis)</b></td>
+    <td>
+      <ul>
+        <li> <a href="http://proceedings.mlr.press/v97/mendis19a.html">Ithemal: Accurate, Portable and Fast Basic Block Throughput Estimation using Deep Neural Networks</a> </li>
+        <li> <a href="https://dl.acm.org/doi/10.1145/3276480">goSLP: globally optimized superword level parallelism framework</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 15</td>
+    <td>November 11</td>
+    <td><a href="lectures/lecture15-notation.pdf"><b>Notation (Pat Hanrahan)</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/pdf/10.1145/1283920.1283935">Notation as a Tool of Thought</a> </li>
+        <li> <a href="https://www.stephenwolfram.com/publications/mathematical-notation-past-future/">Mathematical Notation: Past and Future</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 16</td>
+    <td>November 16</td>
+    <td><b>Guest speaker: Mehdi Amini on MLIR</a></td>
+    <td>
+      <ul>
+        <li>Browse <a href="https://mlir.llvm.org/docs/Tutorials/Toy/">MLIR Toy Tutorial</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 17</td>
+    <td>November 18</td>
+    <td><a href="lectures/lecture17.compilers.pdf"><b>Fast Compilers</b></a></td>
+    <td>
+      <ul>
+        <li> <a href="https://fredrikbk.com/copy-and-patch.html">Copy-and-Patch Compilation</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>November 23</td>
+    <td>Thanksgiving Break (no classes)</td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>November 25</td>
+    <td>Thanksgiving Break (no classes)</td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 18</td>
+    <td>November 30</td>
+    <td><b> Project demo </b></td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 19</td>
+    <td>December 3</td>
+    <td><b> Project demo </b></td>
+    <td>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html> 
