@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Stanford CS343D</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+li
+{
+background-position: 100% .4em;
+<!--padding-right: .6em;-->
+<!--margin: 1em 0;-->
+border-bottom: 1px solid gray;
+}
+li:hover {
+background-color: whitesmoke;
+}
+
+a {
+text-decoration: none;
+}
+a:link {
+color: black;
+border-bottom: 1px dotted black;
+}
+a:visited {
+color: black;
+border-bottom: 1px dotted black;
+}
+a:hover {
+color: #000000;
+border-bottom: 2px solid black;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.schedule_list {
+  list-style-type: none;
+     max-width: 50%;
+ }
+
+/* Add a blue background color to the top navigation */
+.topnav {
+  background-color: #1974D2;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>CS343D: Domain-Specific Programming Models and Compilers</h1>
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="course_info.html">Course Info</a>
+  <a href="past_years.html">Prior Offerings</a>
+</div>
+
+<h2> Course Description </h2>
+<p>
+This class will cover the principles and practices of domain-specific programming models and compilers for dense and sparse applications in scientific computing, data science, and machine learning. We will study programming models from the recent literature, categorize them, and discuss their properties. We will also discuss promising directions for their compilation, including the separation of algorithm, schedule, and data representation, polyhedral compilation versus rewrite rules, and sparse iteration theory. Prerequisites: CS143 or equivalent
+</p>
+
+<h2> Basic Logistics</h2>
+<p> <b>Professor</b>: <a href = "mailto: kjolstad@cs.stanford.edu">Fred Kjolstad</a></p>
+<p> <b>CA</b>: <a href = "mailto: ajroot@stanford.edu">AJ Root</a></p>
+
+<p> <b>Quarter</b>: Winter 2024</p>
+<p> <b>Lecture Times</b>: Tue, Thu 10:30 AM - 11:50 AM</p>
+<p> <b>Lecture Location</b>: Littlefield 107</p>
+
+<p> <b>Fred's office hours</b>: Friday 11-12noon in Gates 486 (10-11am on Jan 12th)</p>
+<p> <b>AJ's office hours</b>: Wednesday 3-4pm in Gates 4B common area</p>
+
+<p> For more detail see the <a href="course_info.html">course info</a> page.
+
+<h2> Schedule</h2>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td></td>
+    <th>Date</th>
+    <th>Topic</th>
+    <th>Readings</th>
+  </tr>
+  <tr>
+    <td>Lecture 1</td>
+    <td>January 9</td>
+    <td><b><a href="lectures/lecture1.introduction.pdf">Introduction</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/10.1145/6424.315691">Programming Pearls: little languages</a> </li>
+        <li> <a href="https://cacm.acm.org/magazines/2019/2/234352-a-new-golden-age-for-computer-architecture/fulltext">A New Golden Age for Computer Architecture</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 2</td>
+    <td>January 11</td>
+    <td><b><a href="lectures/lecture2.compilers.pdf">Domain-Specific Compilers</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://science.sciencemag.org/content/368/6495/eaam9744">There’s plenty of room at the Top: What will drive computer performance after Moore’s law?</a> </li>
+        <li> <a href="https://dl.acm.org/doi/10.1145/359576.359579">Can Programming Be Liberated from the von Neumann Style? (except Sections 12, 13, and 14)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 3</td>
+    <td>January 16</td>
+    <td><b><a href="lectures/lecture3.build.pdf">Building DSLs</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/fullHtml/10.1145/242224.242477">Building Domain-Specific Embedded Languages</a></li>
+        <li> <a href="https://dl.acm.org/doi/abs/10.1145/2491956.2462166">Terra: a multi-stage language for high-performance computing</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 4</td>
+    <td>January 18</td>
+    <td><b><a href="lectures/lecture4.collections.pdf">Collection-Oriented Languages</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://ieeexplore.ieee.org/document/92044">Collection-Oriented Languages</a> </li>
+        <li> <a href="https://www.sciencedirect.com/science/article/pii/0898122175900115">An Introduction to the Set Theoretical Language SETL</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 5</td>
+    <td>January 23</td>
+    <td><b><a href="lectures/lecture5.dense.pdf">Dense Programming System</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/pdf/10.1145/3150211">Halide: Decoupling Algorithms from Schedules for High-Performance Image Processing</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 6</td>
+    <td>January 25</td>
+    <td><b><a href="lectures/lecture6.sparse.pdf">Sparse Programming Systems</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/10.1145/362384.362685">A Relational Model of Data for Large Shared Data Banks</a> </li>
+        <li> <a href="http://fredrikbk.com/publications/kjolstad-thesis.pdf">Sparse Tensor Algebra Compilation (Chapters 1 and 9)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 7</td>
+    <td>January 30</td>
+    <td><b><a href="lectures/lecture7.iteration1.pdf">Sparse Iteration Model I</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="http://fredrikbk.com/publications/kjolstad-thesis.pdf">Sparse Tensor Algebra Compilation (Chapters 2 and 3)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 8</td>
+    <td>February 1</td>
+    <td><b><a href="lectures/lecture8.iteration2.pdf">Sparse Iteration Model II</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="http://fredrikbk.com/publications/kjolstad-thesis.pdf">Sparse Tensor Algebra Compilation (Chapters 4, 5, and 6)</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 9</td>
+    <td>February 6</td>
+    <td><b>Project Pitch</b></td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 10</td>
+    <td>February 8</td>
+    <td><b><a href="lectures/lecture10.fast.compilers.pdf">Fast Compilers</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://hacks.mozilla.org/2018/01/making-webassembly-even-faster-firefoxs-new-streaming-and-tiering-compiler/">Firefox's Baseline WebAssembly Compiler</a> </li>
+        <li> <a href="https://fredrikbk.com/copy-and-patch.html">Copy-and-Patch Compilation</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 11</td>
+    <td>February 13</td>
+    <td><b>Project Discussion I</b></td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 12</td>
+    <td>February 15</td>
+    <td><b>Project Discussion II</b></td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 13</td>
+    <td>February 20</td>
+    <td><b>Performance vs. Correctness When Writing Low-Level HPC Code (<a href="http://www.gilbertbernstein.com">Gilbert Bernstein</a>) </b></td>
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/abs/10.1145/3498717">Verified Tensor-Program Optimization Via High-Level Scheduling Rewrites</a> </li>
+        <li> <a href="https://dl.acm.org/doi/abs/10.1145/3519939.3523446">Exocompilation for Productive Programming of Hardware Accelerators</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 14</td>
+    <td>February 22</td>
+    <td><b>Codesigning Computing Systems for Artificial Intelligence
+ (<a href="https://people.csail.mit.edu/suvinay/">Suvinay Subramanian</a>)</b></td>
+    <td>
+      <ul>
+        <li><a href="https://dl.acm.org/doi/abs/10.1145/3579371.3589350">TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings</a></li>
+        <li> <a href="http://www.eecs.harvard.edu/~htk/publication/1982-kung-why-systolic-architecture.pdf">Why Systolic Architectures?</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 15</td>
+    <td>February 27</td>
+    <td><b><a href="lectures/lecture15.dsas.pdf">Domain-Specific Accelerators</a></b></td>
+    <td>
+      <ul>
+        <li> <a href="https://ieeexplore.ieee.org/iel7/6747109/6757318/06757323.pdf">Computing’s Energy Problem (and what we can do about it)</a> </li>
+        <li> <a href="https://arxiv.org/abs/2208.14610">The Sparse Abstract Machine</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 16</td>
+    <td>February 29</td>
+    <td><b>Sparse Shape Operators (AJ)</b></td>
+    <td>
+      <ul>
+        <li><a href="papers/burrito.pdf">Compilation of Shape Operators on Sparse Arrays</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 17</td>
+    <td>March 5</td>
+    <td><b>Automatic Scheduling (AJ)</b></td>
+    <td>
+      <ul>
+        <li> <a href="https://halide-lang.org/papers/halide_autoscheduler_2019.pdf">Learning to Optimize Halide with Tree Search and Random Programs</a> </li>
+        <li> <a href="https://dl.acm.org/doi/10.1145/3519939.3523442">Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 18</td>
+    <td>March 7</td>
+    <td><a href="lectures/lecture17.notation.pdf"><b>Notation (Pat Hanrahan)</b></a></td> 
+    <td>
+      <ul>
+        <li> <a href="https://dl.acm.org/doi/pdf/10.1145/1283920.1283935">Notation as a Tool of Thought</a> </li>
+        <li> <a href="https://www.stephenwolfram.com/publications/mathematical-notation-past-future/">Mathematical Notation: Past and Future</a> </li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 19</td>
+    <td>March 12</td>
+    <td><b> Project demo </b></td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>Lecture 20</td>
+    <td>March 14</td>
+    <td><b> Project demo </b></td>
+    <td>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html> 
